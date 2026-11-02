@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Zion Umeobi — AI Quality Analyst, Web Developer, and Electrical & Renewable Energy Technologist.">
+  <meta name="theme-color" content="#080d18">
+  <title>Zion Umeobi | Professional Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f2eadf;--panel:#fffaf3;--panel2:#eee2d3;--text:#33271f;--muted:#76685c;--line:rgba(83,60,42,.16);--blue:#95633f;--cyan:#b58b62;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(ellipse at 82% 0%,rgba(181,139,98,.20),transparent 36%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(242,234,223,.90);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font:700 1.22rem "Space Grotesk";letter-spacing:-.04em}.brand span{color:var(--blue)}
+    nav{display:flex;gap:25px;align-items:center}nav a{font-size:.9rem;color:var(--muted);transition:.2s}nav a:hover{color:var(--text)}
+    .menu{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:1.1rem}
+    .hero{padding:92px 0 84px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px;min-height:650px}
+    .eyebrow{color:var(--cyan);font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    h1,h2,h3{font-family:"Space Grotesk";line-height:1.12;letter-spacing:-.04em}
+    h1{font-size:clamp(2.8rem,6vw,5.4rem);margin:18px 0 20px;max-width:760px}
+    h1 span{background:linear-gradient(100deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.12rem;color:var(--muted);max-width:650px;margin:0 0 30px}
+    .actions{display:flex;flex-wrap:wrap;gap:13px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:10px;font-weight:700;font-size:.92rem;border:1px solid var(--line);transition:.2s}
+    .btn.primary{background:linear-gradient(110deg,#438be8,#43c9c0);color:#fffaf3;border:0}.btn:hover{transform:translateY(-2px)}
+    .hero-visual{position:relative;display:flex;justify-content:center;align-items:end;min-height:440px}
+    .photo-glow{position:absolute;width:min(390px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(181,139,98,.30),rgba(149,99,63,.08) 55%,transparent 70%);filter:blur(8px)}
+    .photo-frame{position:relative;width:min(390px,100%);height:460px;display:flex;align-items:end;justify-content:center;overflow:hidden;border:1px solid rgba(128,180,255,.25);border-radius:190px 190px 24px 24px;background:linear-gradient(145deg,#e2d1bd,#cbb39a);box-shadow:0 25px 70px rgba(83,60,42,.16)}
+    .photo-frame img{width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 10px 25px rgba(0,0,0,.25))}
+    .photo-tag{position:absolute;bottom:22px;left:-15px;background:#fffaf3;border:1px solid var(--line);border-radius:12px;padding:11px 15px;color:var(--muted);font-size:.82rem;box-shadow:0 12px 30px rgba(83,60,42,.12)}
+    .photo-tag strong{display:block;color:var(--text);font-size:.95rem}
+    section{padding:82px 0;border-top:1px solid var(--line)}.section-head{max-width:700px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 14px}.section-head p{color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:35px}.about-copy{color:var(--muted);font-size:1.02rem}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:13px}.fact,.card,.skill-card,.project,.timeline-item{background:linear-gradient(145deg,#fffaf3,#eee2d3);border:1px solid var(--line);border-radius:16px;padding:22px}
+    .fact small{display:block;color:var(--muted);margin-bottom:5px}.fact strong{font-size:.97rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill-card .icon{font-size:1.45rem}.skill-card h3{font-size:1.15rem;margin:13px 0 8px}.skill-card p{font-size:.92rem;color:var(--muted);margin:0}
+    .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}.tag{border:1px solid var(--line);border-radius:999px;padding:7px 12px;color:#6b5543;font-size:.82rem;background:rgba(149,99,63,.06)}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.project{padding:25px}.project-top{display:flex;justify-content:space-between;gap:15px;align-items:center}.project h3{font-size:1.28rem;margin:13px 0 9px}.project p{color:var(--muted);margin:0}.project .type{font-size:.76rem;color:var(--cyan);text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+
+    .solar-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:18px}
+    .solar-shot{margin:0;overflow:hidden;border-radius:13px;border:1px solid var(--line);background:#fffaf3}
+    .solar-shot img{display:block;width:100%;height:190px;object-fit:cover;transition:transform .35s}
+    .solar-shot:hover img{transform:scale(1.035)}
+    .solar-shot figcaption{padding:10px 12px;color:var(--muted);font-size:.8rem}
+    @media(max-width:600px){.solar-gallery{grid-template-columns:1fr}.solar-shot img{height:220px}}
+
+    .timeline{display:grid;gap:14px}.timeline-item{display:grid;grid-template-columns:150px 1fr;gap:22px}.date{color:var(--cyan);font-weight:700;font-size:.9rem}.timeline-item h3{font-size:1.08rem;margin:0 0 6px}.timeline-item p{color:var(--muted);margin:0;font-size:.94rem}
+    .education{display:grid;grid-template-columns:1fr 1fr;gap:16px}.edu-card h3{margin:8px 0}.edu-card p{color:var(--muted);margin:0}.contact-box{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:34px;border:1px solid rgba(98,166,255,.25);border-radius:20px;background:linear-gradient(110deg,rgba(181,139,98,.20),rgba(149,99,63,.08))}
+    .contact-box h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 8px}.contact-box p{color:var(--muted);margin:0}
+    .contact-links{display:flex;flex-direction:column;gap:10px;color:#5a4030;font-size:.92rem}.contact-links a:hover{color:var(--cyan)}
+    footer{padding:25px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding-top:65px}.hero-visual{min-height:390px}.photo-frame{height:410px;width:340px}.about-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.contact-box{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.wrap{width:min(100% - 32px,var(--max))}.nav{height:68px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 22px 22px;background:#f2eadf;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.hero{padding:56px 0 65px;min-height:auto}h1{font-size:2.75rem}.lead{font-size:1rem}.hero-visual{min-height:350px}.photo-frame{height:365px;width:290px}.photo-tag{left:0}.cards,.project-grid,.education{grid-template-columns:1fr}.timeline-item{grid-template-columns:1fr;gap:6px}section{padding:65px 0}.facts{grid-template-columns:1fr 1fr}.contact-box{padding:25px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">ZION<span>.</span></a>
+    <nav id="navLinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+<main>
+  <div class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Welcome to my portfolio</div>
+      <h1>Hi, I'm Zion.<br><span>I build, evaluate &amp; connect technology.</span></h1>
+      <p class="lead">I'm the Founder of ZANGLORI, an AI Quality Analyst, Web Developer, and Electrical &amp; Renewable Energy Technologist. I enjoy solving practical problems through thoughtful technology, reliable systems, and continuous learning.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work ↗</a>
+        <a class="btn" href="mailto:zangolri@hotmail.com">Contact me</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo-glow"></div>
+      <div class="photo-frame"><img src="assets/zion-profile.png" alt="Portrait of Zion Umeobi"></div>
+      <div class="photo-tag"><strong>Zion Umeobi</strong>Technology • Creativity • Innovation</div>
+    </div>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">A little about me</div><h2>Curious by nature.<br>Practical by approach.</h2><p>I bring together experience across AI quality work, digital development, and electrical technology.</p></div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>My work sits at the intersection of people and technology. In AI, I contribute to evaluation and quality-focused tasks that help assess model responses and data. In web development, I create and improve websites and e-commerce experiences. In electrical and renewable energy work, I have gained practical exposure to solar installations, electrical systems, and telecommunications installations.</p>
+        <p>I'm currently pursuing a degree in Electrical and Electronic Engineering at Ekiti State University. I value clear communication, careful problem-solving, and work that makes a useful difference.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><small>Based in</small><strong>Nigeria</strong></div>
+        <div class="fact"><small>Education</small><strong>B.Eng. (in progress)</strong></div>
+        <div class="fact"><small>Work style</small><strong>Remote &amp; freelance</strong></div>
+        <div class="fact"><small>Languages</small><strong>English, Igbo, Yoruba</strong></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">What I work with</div><h2>Skills &amp; capabilities</h2><p>A multidisciplinary skill set across AI, web technologies, and hands-on technical installation.</p></div>
+    <div class="cards">
+      <article class="skill-card"><div class="icon">◈</div><h3>AI &amp; Quality Evaluation</h3><p>AI/LLM response evaluation, conversational and data annotation, model quality assessment, response ranking, and QA-focused review.</p></article>
+      <article class="skill-card"><div class="icon">⌘</div><h3>Web &amp; E-commerce</h3><p>Website design and development, Shopify store setup, WordPress, Wix, and user-focused e-commerce experiences.</p></article>
+      <article class="skill-card"><div class="icon">⚡</div><h3>Electrical &amp; Solar</h3><p>Solar installation support, inverter systems, electrical connections, system checks, and renewable energy technology.</p></article>
+      <article class="skill-card"><div class="icon">⌁</div><h3>Telecommunications</h3><p>Practical exposure to telecommunications installation and technical field work.</p></article>
+      <article class="skill-card"><div class="icon">✓</div><h3>Testing &amp; Problem Solving</h3><p>Quality checks, careful review, troubleshooting, documentation, and attention to detail.</p></article>
+      <article class="skill-card"><div class="icon">◎</div><h3>Communication</h3><p>Clear written communication and collaboration in English, Igbo, and Yoruba.</p></article>
+    </div>
+    <div class="tags"><span class="tag">AI Evaluation</span><span class="tag">Data Annotation</span><span class="tag">LLM QA</span><span class="tag">HTML &amp; CSS</span><span class="tag">JavaScript</span><span class="tag">Shopify</span><span class="tag">WordPress</span><span class="tag">Wix</span><span class="tag">Solar Systems</span><span class="tag">Electrical Installation</span></div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Selected work</div><h2>Projects &amp; practical work</h2><p>A selection of digital and technical work that reflects my interests and experience.</p></div>
+    <div class="project-grid">
+      <article class="project"><div class="project-top"><span class="type">Web development</span><span>↗</span></div><h3>Scoop &amp; Smile Website</h3><p>A food-focused website project built for an engaging online brand presence, with attention to visual presentation and media content.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Pages</span></div></article>
+      <article class="project"><div class="project-top"><span class="type">E-commerce</span><span>↗</span></div><h3>COKITOMI.SHOP</h3><p>An online store project focused on teddy bears and gift products, including e-commerce presentation and organic social media marketing.</p><div class="tags"><span class="tag">Shopify</span><span class="tag">E-commerce</span><span class="tag">Organic Marketing</span></div><p style="margin-top:16px"><a href="https://cokitomi.shop/" target="_blank" rel="noopener">Visit store →</a></p></article>
+      <article class="project"><div class="project-top"><span class="type">AI quality</span><span>◈</span></div><h3>AI Evaluation &amp; Annotation</h3><p>Contributor work involving AI quality analysis, conversational and data annotation, and evaluation-focused tasks.</p><div class="tags"><span class="tag">AI/LLM</span><span class="tag">Evaluation</span><span class="tag">Quality Review</span></div></article>
+      <article class="project"><div class="project-top"><span class="type">Renewable energy</span><span>⚡</span></div><h3>Solar &amp; Inverter Installation</h3><p>Hands-on technical experience supporting solar and inverter installations, checking panel voltage, inspecting connections, and correcting wiring issues.</p><div class="tags"><span class="tag">Solar PV</span><span class="tag">Inverters</span><span class="tag">Electrical Systems</span></div>
+        <div class="solar-gallery" aria-label="Solar installation project photographs">
+          <figure class="solar-shot"><img src="assets/solar-rooftop-installation.jpg" alt="Rooftop solar panel installation in progress" loading="lazy"><figcaption>Rooftop panel installation</figcaption></figure>
+          <figure class="solar-shot"><img src="assets/solar-panel-array.jpg" alt="Installed solar panel array beside a building" loading="lazy"><figcaption>Installed solar panel array</figcaption></figure>
+          <figure class="solar-shot"><img src="assets/inverter-battery-system.jpg" alt="Inverter and lithium battery storage system" loading="lazy"><figcaption>Inverter &amp; battery system</figcaption></figure>
+        </div></article>
+    </div>
+  </div></section>
+
+  <section id="experience"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Professional journey</div><h2>Experience</h2><p>Experience across digital services, AI quality work, and technical installation.</p></div>
+    <div class="timeline">
+      <article class="timeline-item"><div class="date">Startup in development</div><div><h3>Founder – ZANGLORI</h3><p>Building a diversified business enterprise with interests in media, transportation, energy, agriculture, real estate, and strategic investments. Currently focused on establishing the company's foundation and developing its first operational division, ZANGLORI Media, including digital entertainment projects such as Wahala Bot TV.</p><p style="margin-top:12px"><strong>Key responsibilities:</strong> Business development and strategic planning; startup development and company structuring; brand development and management; digital media and entertainment development; and business strategy and growth planning.</p></div></article>
+      <article class="timeline-item"><div class="date">2025 – 2026</div><div><h3>AI Quality Analysis &amp; Evaluation</h3><p>Contributor experience in AI quality analysis, conversational/data annotation, and training or evaluation-related tasks.</p></div></article>
+      <article class="timeline-item"><div class="date">2024 – 2026</div><div><h3>Freelance Web &amp; E-commerce Developer</h3><p>Building and supporting websites and online stores using Shopify, WordPress, and Wix, with a focus on practical business needs.</p></div></article>
+      <article class="timeline-item"><div class="date">2025 – 2026</div><div><h3>Solar Installation — OIC Solar</h3><p>Practical exposure to solar installation work and electrical system setup.</p></div></article>
+      <article class="timeline-item"><div class="date">2025 – 2026</div><div><h3>Telecommunications Installation — AI Hua Tech</h3><p>Technical installation experience in a telecommunications environment.</p></div></article>
+    </div>
+  </div></section>
+
+  <section id="education"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">Learning & development</div><h2>Education &amp; training</h2></div>
+    <div class="education">
+      <article class="fact edu-card"><small>2023 – 2027 (Expected)</small><h3>B.Eng. Electrical and Electronic Engineering</h3><p>Ekiti State University</p></article>
+      <article class="fact edu-card"><small>2025</small><h3>Contributor Training</h3><p>Micro1 and Mercor contributor training.</p></article>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact-box">
+      <div><div class="eyebrow">Let's connect</div><h2>Have a project or opportunity?</h2><p>I'm open to relevant remote, freelance, and full-time opportunities.</p></div>
+      <div class="contact-links">
+        <a href="mailto:zangolri@hotmail.com">✉ zangolri@hotmail.com</a>
+        <a href="tel:+2347061260124">☎ +234 706 126 0124</a>
+        <a href="https://wa.me/2347061260124" target="_blank" rel="noopener">◉ Chat on WhatsApp</a>
+        <a href="https://www.linkedin.com/in/zion-umeobi-724b9841b" target="_blank" rel="noopener">in LinkedIn profile ↗</a>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year"></span> Zion Umeobi. All rights reserved.</span><span>Designed with purpose. Built for the future.</span></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>nav.classList.remove('open')));
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
